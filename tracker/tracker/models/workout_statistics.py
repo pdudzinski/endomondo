@@ -94,6 +94,7 @@ class WorkoutStatistics(object):
         struct = {}
         max_speed = 0
         min_speed = int(round(1/self._convert_kmh_to_hms(runs[0].avg_speed)*distance))
+        min_speed_stats_run = runs[0]
         for r in runs:
             yearmonth = self._get_yearmonth(r)
             avg_speed = int(round(1/self._convert_kmh_to_hms(r.avg_speed)*distance))
